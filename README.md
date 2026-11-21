@@ -18,4 +18,4 @@ Until it is set, every "Sign up" button opens an email to hq@ravencorps.co.uk.
 
 ## Meetup dates
 
-The page works out the next meetup itself: the third Saturday of each month, starting 16 January 2027.
+The page works out the next meetup itself: the third Saturday of each month. The first one is Saturday 23 January 2027, the fourth Saturday, because January 2027 has five. That exception is `meetupDay()` in `index.html`.

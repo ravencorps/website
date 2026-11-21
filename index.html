@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Raven Corps</title>
-<meta name="description" content="Raven Corps is a new group in Frodsham, Cheshire for adults who want real-world skills: map and compass, bushcraft, first aid, fitness and being ready for emergencies. Free monthly meetups from 16 January 2027.">
+<meta name="description" content="Raven Corps is a new group in Frodsham, Cheshire for adults who want real-world skills: map and compass, bushcraft, first aid, fitness and being ready for emergencies. Free monthly meetups from 23 January 2027.">
 <meta name="theme-color" content="#eceee7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#11130f" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raven Corps">
 <meta property="og:title" content="Raven Corps: ready for anything">
-<meta property="og:description" content="Raven Corps is a new group in Frodsham, Cheshire for adults who want real-world skills: map and compass, bushcraft, first aid, fitness and being ready for emergencies. Free monthly meetups from 16 January 2027.">
+<meta property="og:description" content="Raven Corps is a new group in Frodsham, Cheshire for adults who want real-world skills: map and compass, bushcraft, first aid, fitness and being ready for emergencies. Free monthly meetups from 23 January 2027.">
 <meta property="og:url" content="https://ravencorps.co.uk/">
 <meta property="og:image" content="https://ravencorps.co.uk/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -296,7 +296,7 @@ p { margin: 0; }
     <div class="wrap meetups">
       <div class="meetup-main">
         <p class="eyebrow">The meetups</p>
-        <h2 id="meetups-title"><span id="meetup-label">First meetup</span>: <span id="meetup-date">Saturday 16 January 2027</span></h2>
+        <h2 id="meetups-title"><span id="meetup-label">First meetup</span>: <span id="meetup-date">Saturday 23 January 2027</span></h2>
         <dl class="details">
           <div><dt>What</dt><dd>A map-and-compass walk on the Sandstone Trail, about two hours, finishing with a brew</dd></div>
           <div><dt>Where</dt><dd>Frodsham. The meeting point and start time are emailed to you when you sign up</dd></div>
@@ -425,17 +425,22 @@ p { margin: 0; }
       if (FORM_URL) { a.target = "_blank"; a.rel = "noopener"; }
     });
 
-    // Meetups run on the third Saturday of each month, from 16 January 2027.
+    // Meetups run on the third Saturday of each month. The first one is the
+    // fourth Saturday of January 2027 (23 January), because that month has five.
+    var FIRST = Date.UTC(2027, 0, 23);
     function thirdSaturday(y, m) {
       var w = new Date(Date.UTC(y, m, 1)).getUTCDay();
       return new Date(Date.UTC(y, m, 1 + ((6 - w + 7) % 7) + 14));
     }
+    function meetupDay(y, m) {
+      return (y === 2027 && m === 0) ? new Date(FIRST) : thirdSaturday(y, m);
+    }
     function upcoming(from, n) {
-      var first = Date.UTC(2027, 0, 16), out = [];
+      var out = [];
       var y = from.getUTCFullYear(), m = from.getUTCMonth();
       while (out.length < n) {
-        var d = thirdSaturday(y, m);
-        if (d.getTime() >= from.getTime() && d.getTime() >= first) out.push(d);
+        var d = meetupDay(y, m);
+        if (d.getTime() >= from.getTime() && d.getTime() >= FIRST) out.push(d);
         m += 1; if (m > 11) { m = 0; y += 1; }
       }
       return out;
@@ -444,7 +449,7 @@ p { margin: 0; }
     var today = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
     var dates = upcoming(today, 5);
     var opts = { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "UTC" };
-    var isFirst = dates[0].getTime() === Date.UTC(2027, 0, 16);
+    var isFirst = dates[0].getTime() === FIRST;
     document.getElementById("meetup-label").textContent = isFirst ? "First meetup" : "Next meetup";
     document.getElementById("meetup-date").textContent = dates[0].toLocaleDateString("en-GB", opts);
     var list = document.getElementById("meetup-list");
