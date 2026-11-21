@@ -233,13 +233,18 @@ p { margin: 0; }
 
 /* Call to action */
 .cta { background: var(--olive); color: var(--on-olive); padding-block: clamp(48px, 7vw, 80px); }
-.cta-in { display: grid; grid-template-columns: minmax(0, 1.4fr) auto; gap: 32px; align-items: center; }
+.cta-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
 .cta h2 { margin-bottom: 10px; }
 .cta p { max-width: 36em; }
-.cta-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.cta-text p + p { margin-top: 14px; }
 .cta-mail { font-size: 0.95rem; }
 .mail { font-family: var(--mono); font-size: 0.92em; user-select: all; }
-@media (max-width: 760px) { .cta-in { grid-template-columns: 1fr; } }
+/* The HubSpot form draws its own light styling, so it always sits on a white card. */
+.form-card { min-width: 0; background: #ffffff; color: #181a16; border-radius: 4px; padding: clamp(16px, 3vw, 32px); }
+.form-card .hs-form-frame { min-height: 320px; }
+.form-fallback { margin-top: 12px; font-size: 0.9rem; color: #4c5146; }
+.form-fallback a { color: #3d4829; font-weight: 600; }
+@media (max-width: 860px) { .cta-in { grid-template-columns: 1fr; } }
 
 /* Footer */
 .foot { padding-block: 32px 40px; color: var(--ink-2); font-size: 0.95rem; }
@@ -386,13 +391,15 @@ p { margin: 0; }
 
   <section id="signup" class="cta" aria-labelledby="signup-title">
     <div class="wrap cta-in">
-      <div>
+      <div class="cta-text">
         <h2 id="signup-title">Sign up for the first meetup</h2>
-        <p>Free, for over-18s, and no experience needed. Leave your details and we'll email you the meeting point and time.</p>
-      </div>
-      <div class="cta-actions">
-        <a class="btn btn-invert" data-signup href="mailto:hq@ravencorps.co.uk?subject=Raven%20Corps%20sign-up">Sign up</a>
+        <p>Free, for over-18s, and no experience needed. Leave your details and we'll email you the meeting point.</p>
+        <p>Registering interest for a child, or want to help run it? Use the same form and tick the box that fits.</p>
         <p class="cta-mail">Or email <span class="mail">hq@ravencorps.co.uk</span></p>
+      </div>
+      <div class="form-card">
+        <div class="hs-form-frame" data-region="eu1" data-form-id="678d493f-c9ae-4455-b22c-08f94b976ea2" data-portal-id="149830763"></div>
+        <p class="form-fallback">Form not showing? <a href="https://2h7e5n.share-eu1.hsforms.com/2Z41JP8muRFWyLAj5S5duog" target="_blank" rel="noopener">Open the sign-up form</a></p>
       </div>
     </div>
   </section>
@@ -414,15 +421,15 @@ p { margin: 0; }
 </footer>
 
 <script>
-  // Set FORM_URL to the Google Form link once it exists. Until then, sign-up buttons open an email.
-  var FORM_URL = "";
+  // Sign-up buttons jump to the HubSpot form in the #signup section.
+  var FORM_URL = "#signup";
   var EMAIL = "hq@ravencorps.co.uk";
 
   (function () {
     var href = FORM_URL || ("mailto:" + EMAIL + "?subject=" + encodeURIComponent("Raven Corps sign-up"));
     document.querySelectorAll("[data-signup]").forEach(function (a) {
       a.href = href;
-      if (FORM_URL) { a.target = "_blank"; a.rel = "noopener"; }
+      if (/^https?:/.test(FORM_URL)) { a.target = "_blank"; a.rel = "noopener"; }
     });
 
     // Meetups run on the third Saturday of each month. The first one is the
@@ -463,6 +470,7 @@ p { margin: 0; }
     });
   })();
 </script>
+<script src="https://js-eu1.hsforms.net/forms/embed/149830763.js" defer></script>
 
 </body>
 </html>
