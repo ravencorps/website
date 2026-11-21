@@ -257,6 +257,7 @@ p { margin: 0; }
 .small { font-size: 0.85rem; }
 .social { display: flex; gap: 18px; }
 .social a { color: var(--ink); font-weight: 600; text-underline-offset: 4px; }
+[hidden] { display: none !important; }
 
 </style>
 </head>
@@ -468,6 +469,20 @@ p { margin: 0; }
       mon.textContent = d.toLocaleDateString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" });
       li.appendChild(day); li.appendChild(mon); list.appendChild(li);
     });
+  })();
+
+  // Hide the "Form not showing?" link once the HubSpot form has loaded.
+  (function () {
+    var tries = 0;
+    var timer = setInterval(function () {
+      var frame = document.querySelector(".hs-form-frame iframe");
+      if (frame && frame.getBoundingClientRect().height > 200) {
+        var fb = document.querySelector(".form-fallback");
+        if (fb) fb.hidden = true;
+        clearInterval(timer);
+      }
+      if (++tries > 40) clearInterval(timer);
+    }, 500);
   })();
 </script>
 <script src="https://js-eu1.hsforms.net/forms/embed/149830763.js" defer></script>

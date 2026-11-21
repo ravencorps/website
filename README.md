@@ -6,15 +6,9 @@ One static page for ravencorps.co.uk. No build step: Vercel serves the files as 
 - `assets/`: logo, favicon and the image shown when the link is shared
 - `fonts/`: self-hosted Barlow, Barlow Condensed and IBM Plex Mono (SIL Open Font Licence)
 
-## Turning on the sign-up form
+## Sign-up form
 
-Near the bottom of `index.html`, set `FORM_URL` to the Google Form link:
-
-```js
-var FORM_URL = "https://forms.gle/your-form-id";
-```
-
-Until it is set, every "Sign up" button opens an email to hq@ravencorps.co.uk.
+The sign-up section embeds the HubSpot form "Raven Corps: get involved" (portal 149830763, EU region, form 678d493f-c9ae-4455-b22c-08f94b976ea2). The "Sign up" buttons jump to it (`FORM_URL = "#signup"`). If the HubSpot script doesn't load, a link to the form's share page is shown underneath. Edit the form's fields and wording in HubSpot, not here.
 
 ## Meetup dates
 
