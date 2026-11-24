@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Raven Corps</title>
+<title>Raven Corps | Outdoor skills meetups for adults in Frodsham, Cheshire</title>
 <meta name="description" content="Raven Corps is a new group in Frodsham, Cheshire for adults who want real-world skills: map and compass, bushcraft, first aid, fitness and being ready for emergencies. Monthly meetups from 23 January 2027, free while we get started.">
 <meta name="theme-color" content="#eceee7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#11130f" media="(prefers-color-scheme: dark)">
@@ -12,10 +12,11 @@
 <link rel="canonical" href="https://ravencorps.co.uk/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raven Corps">
-<meta property="og:title" content="Raven Corps: ready for anything">
+<meta property="og:title" content="Raven Corps | Outdoor skills meetups for adults in Frodsham, Cheshire">
 <meta property="og:description" content="Raven Corps is a new group in Frodsham, Cheshire for adults who want real-world skills: map and compass, bushcraft, first aid, fitness and being ready for emergencies. Monthly meetups from 23 January 2027, free while we get started.">
 <meta property="og:url" content="https://ravencorps.co.uk/">
 <meta property="og:image" content="https://ravencorps.co.uk/assets/og.png">
+<meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -119,7 +120,25 @@ p { margin: 0; }
 .nav { display: flex; gap: 22px; }
 .nav a { text-decoration: none; font-weight: 500; font-size: 0.98rem; color: var(--ink-2); }
 .nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
-@media (max-width: 760px) { .nav { display: none; } }
+.nav a[aria-current] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+
+/* Small-screen menu */
+.menu { display: none; position: relative; }
+.menu summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; min-height: 40px; padding: 0 14px;
+  border: 2px solid var(--ink); border-radius: 3px;
+  font-family: var(--display); font-weight: 600; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.menu summary::-webkit-details-marker { display: none; }
+.menu nav {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; min-width: 220px;
+  display: flex; flex-direction: column; padding: 6px 0;
+  background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+.menu nav a { padding: 11px 18px; text-decoration: none; font-weight: 500; }
+.menu nav a:hover, .menu nav a[aria-current] { background: var(--paper-2); }
+@media (max-width: 960px) { .nav { display: none; } .menu { display: block; } .topbar-in { gap: 12px; } }
+@media (max-width: 420px) { .topbar .btn-small { display: none; } }
 
 /* Hero: map grid */
 .hero {
@@ -257,27 +276,132 @@ p { margin: 0; }
 .small { font-size: 0.85rem; }
 .social { display: flex; gap: 18px; }
 .social a { color: var(--ink); font-weight: 600; text-underline-offset: 4px; }
+
+
+/* Links from the home page to inner pages */
+.more-link { margin-top: 24px; font-weight: 600; }
+.more-link a { color: var(--olive); text-underline-offset: 4px; }
+.more-link a::after { content: " \2192"; }
+
+/* Footer links */
+.foot-links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.foot-links a { text-decoration: none; color: var(--ink); font-weight: 500; }
+.foot-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Inner pages */
+.page-head {
+  border-bottom: 1px solid var(--rule);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: var(--step) var(--step);
+  padding-block: clamp(36px, 6vw, 72px) clamp(32px, 5vw, 56px);
+}
+.page-head h1 { font-size: clamp(2.3rem, 6vw, 4.2rem); text-transform: uppercase; line-height: 0.95; max-width: 20ch; margin-bottom: 18px; }
+.page-head .lead { margin-bottom: 0; }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0 0 18px; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+.crumbs li + li::before { content: "/"; margin-right: 6px; opacity: 0.6; }
+.crumbs a { color: var(--ink-2); text-underline-offset: 3px; }
+.page-body { padding-block: clamp(36px, 6vw, 72px) clamp(56px, 8vw, 96px); }
+.prose { max-width: 44rem; min-width: 0; }
+.prose > * + * { margin-top: 1rem; }
+.prose h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin-top: 3rem; }
+.prose h3 { font-size: 1.25rem; margin-top: 2rem; }
+.prose ul, .prose ol { padding-left: 1.3rem; }
+.prose li + li { margin-top: 0.45rem; }
+.prose a:not(.btn) { color: var(--olive); font-weight: 500; text-underline-offset: 3px; }
+.answer { border-left: 4px solid var(--olive); background: var(--paper-2); padding: 18px 22px; font-size: 1.1rem; }
+.answer .label { display: block; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 6px; }
+.callout { border: 1px solid var(--brass); padding: 16px 20px; font-size: 1rem; }
+.callout strong { font-weight: 600; }
+.steps { list-style: none; counter-reset: step; padding: 0 !important; border-top: 2px solid var(--ink); }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); column-gap: 12px; padding-block: 16px; border-bottom: 1px solid var(--rule); margin: 0 !important; }
+.steps li::before { content: counter(step, decimal-leading-zero); grid-row: span 2; font-family: var(--display); font-weight: 700; font-size: 1.8rem; line-height: 1; color: var(--brass); }
+.steps h3 { margin: 0 0 4px; font-size: 1.2rem; }
+.faq { border-top: 2px solid var(--ink); }
+.faq-item { padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.faq-item h3 { margin: 0 0 6px; font-size: 1.3rem; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.faq-item p { color: var(--ink-2); }
+.sources { font-size: 0.95rem; }
+.practise { margin-top: 3.5rem !important; background: var(--olive); color: var(--on-olive); padding: clamp(22px, 4vw, 32px); border-radius: 4px; }
+.practise .eyebrow { color: var(--on-olive); opacity: 0.85; margin-bottom: 8px; }
+.practise-title { font-family: var(--display); font-weight: 700; font-size: 1.8rem; line-height: 1; text-transform: uppercase; margin-bottom: 10px !important; }
+.practise .actions { margin-top: 18px; }
+.practise .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.practise .btn:hover { background: transparent; color: var(--on-olive); border-color: var(--on-olive); }
+.practise .btn-quiet { background: transparent; color: var(--on-olive); border-color: var(--on-olive); }
+.practise .btn-quiet:hover { background: var(--on-olive); color: var(--olive); }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); column-gap: 32px; border-top: 2px solid var(--ink); margin-top: 2rem; }
+.card { padding-block: 20px 24px; border-bottom: 1px solid var(--rule); min-width: 0; }
+.card h3 { font-size: 1.35rem; margin: 0 0 6px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.card p { color: var(--ink-2); font-size: 1rem; }
+.prose .details { margin-top: 1.5rem; }
 [hidden] { display: none !important; }
 
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://ravencorps.co.uk/#org",
+   "name": "Raven Corps",
+   "url": "https://ravencorps.co.uk/",
+   "logo": "https://ravencorps.co.uk/assets/raven-corps-logo.png",
+   "email": "hq@ravencorps.co.uk",
+   "slogan": "Ready for anything",
+   "sameAs": [
+    "https://www.facebook.com/ravencorpsglobal/"
+   ],
+   "areaServed": "United Kingdom",
+   "description": "A community group, started in Frodsham, Cheshire, for adults who want real-world skills: map and compass, bushcraft, first aid, fitness and being ready for emergencies."
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://ravencorps.co.uk/#site",
+   "url": "https://ravencorps.co.uk/",
+   "name": "Raven Corps",
+   "publisher": {
+    "@id": "https://ravencorps.co.uk/#org"
+   },
+   "inLanguage": "en-GB"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="topbar">
   <div class="wrap topbar-in">
-    <a class="brand" href="#top" aria-label="Raven Corps home">
-      <img src="assets/raven-corps-logo.png" alt="" width="32" height="40">
+    <a class="brand" href="/" aria-label="Raven Corps home">
+      <img src="/assets/raven-corps-logo.png" alt="" width="32" height="40">
       <span>Raven Corps</span>
     </a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#meetups">Meetups</a>
-      <a href="#skills">Skills</a>
-      <a href="#families">Families</a>
-      <a href="#help">Get involved</a>
+    <nav class="nav" aria-label="Main">
+        <a href="/meetups/">Meetups</a>
+        <a href="/skills/">Skills guides</a>
+        <a href="/start-a-chapter/">Start a chapter</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/about/">About</a>
     </nav>
-    <a class="btn btn-small" data-signup href="mailto:hq@ravencorps.co.uk?subject=Raven%20Corps%20sign-up">Sign up</a>
+    <a class="btn btn-small" data-signup href="/#signup">Sign up</a>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav aria-label="Main menu">
+        <a href="/meetups/">Meetups</a>
+        <a href="/skills/">Skills guides</a>
+        <a href="/start-a-chapter/">Start a chapter</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/about/">About</a>
+        <a href="/#signup">Sign up</a>
+      </nav>
+    </details>
   </div>
 </header>
-
 <main id="top">
   <section class="hero" aria-labelledby="hero-title">
     <div class="grid-labels eastings" aria-hidden="true"><span>49</span><span>50</span><span>51</span><span>52</span><span>53</span><span>54</span><span>55</span><span>56</span><span>57</span><span>58</span><span>59</span><span>60</span><span>61</span><span>62</span><span>63</span></div>
@@ -293,7 +417,7 @@ p { margin: 0; }
         </div>
       </div>
       <figure class="hero-mark">
-        <img src="assets/raven-corps-logo.png" alt="The Raven Corps raven, wings spread" width="406" height="512">
+        <img src="/assets/raven-corps-logo.png" alt="The Raven Corps raven, wings spread" width="406" height="512">
       </figure>
     </div>
   </section>
@@ -311,6 +435,7 @@ p { margin: 0; }
           <div><dt>Who</dt><dd>Over-18s. No experience needed</dd></div>
           <div><dt>Bring</dt><dd>Boots, a waterproof, warm layers and gloves, your own food, and a hipflask of your favourite tipple or a flask of tea, coffee or hot chocolate. Driving? Make it the hot drink</dd></div>
         </dl>
+        <p class="more-link"><a href="/meetups/">More about the meetups</a></p>
       </div>
       <aside class="dates" aria-labelledby="dates-title">
         <h3 id="dates-title">Then the third Saturday of every month</h3>
@@ -354,6 +479,7 @@ p { margin: 0; }
           <p>Help the local community and learn the history that shaped it.</p>
         </article>
       </div>
+      <p class="more-link"><a href="/skills/">Read the free skills guides</a></p>
     </div>
   </section>
 
@@ -380,6 +506,7 @@ p { margin: 0; }
         <p class="eyebrow">Get involved</p>
         <h2 id="help-title">Founding members wanted</h2>
         <p class="section-lead">Raven Corps is being built in Frodsham from the ground up, with chapters in other towns to follow. If you'd like to help shape it, or to start a chapter where you live, come to a meetup, or sign up and tick "Helping to run or instruct".</p>
+        <p class="more-link"><a href="/start-a-chapter/">How to start a chapter</a></p>
       </div>
       <ul class="roles">
         <li>Ex-forces or cadet instructors</li>
@@ -407,21 +534,6 @@ p { margin: 0; }
     </div>
   </section>
 </main>
-
-<footer class="foot">
-  <div class="wrap foot-in">
-    <div class="foot-brand">
-      <img src="assets/raven-corps-logo.png" alt="" width="28" height="35">
-      <div>
-        <strong>Raven Corps</strong>
-        <span>Ready for anything</span>
-      </div>
-    </div>
-    <p>Frodsham, Cheshire · <span class="mail">hq@ravencorps.co.uk</span></p>
-    <p class="social"><a href="https://www.facebook.com/ravencorpsglobal/" target="_blank" rel="noopener">Facebook</a></p>
-    <p class="small">© 2026 Raven Corps</p>
-  </div>
-</footer>
 
 <script>
   // Sign-up buttons jump to the HubSpot form in the #signup section.
@@ -488,6 +600,26 @@ p { margin: 0; }
   })();
 </script>
 <script src="https://js-eu1.hsforms.net/forms/embed/149830763.js" defer></script>
-
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="/assets/raven-corps-logo.png" alt="" width="28" height="35">
+      <div>
+        <strong>Raven Corps</strong>
+        <span>Ready for anything</span>
+      </div>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="/meetups/">Meetups</a>
+      <a href="/skills/">Skills guides</a>
+      <a href="/start-a-chapter/">Start a chapter</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/about/">About</a>
+    </nav>
+    <p>Frodsham, Cheshire · <span class="mail">hq@ravencorps.co.uk</span></p>
+    <p class="social"><a href="https://www.facebook.com/ravencorpsglobal/" target="_blank" rel="noopener">Facebook</a></p>
+    <p class="small">© 2026 Raven Corps</p>
+  </div>
+</footer>
 </body>
 </html>

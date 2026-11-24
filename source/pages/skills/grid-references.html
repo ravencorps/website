@@ -1,0 +1,63 @@
+<!--meta
+{"path": "/skills/grid-references/", "type": "guide",
+ "h1": "How to read a six-figure grid reference",
+ "title": "How to read a six-figure grid reference on an OS map | Raven Corps",
+ "llms_title": "How to read a six-figure grid reference",
+ "description": "Read the easting along the bottom, then the northing up the side, and split each 1 km grid square into tenths. A step-by-step guide to six-figure grid references on Ordnance Survey maps.",
+ "crumbs": [["Home", "/"], ["Skills guides", "/skills/"], ["Grid references", "/skills/grid-references/"]],
+ "steps": [
+  ["Find the grid square", "Ordnance Survey maps are covered in blue grid lines 1 km apart. Each line has a two-digit number printed in the map margin. Find the square your point is in."],
+  ["Read the easting", "Take the line on the left-hand (west) side of the square, and read its number along the top or bottom edge of the map. Say it's <strong>51</strong>."],
+  ["Count tenths across", "Imagine the square split into ten strips from left to right. Count how many tenths across your point is. If it's halfway, that's <strong>5</strong>, so your easting is <strong>515</strong>."],
+  ["Read the northing", "Take the line along the bottom (south) side of the square, and read its number up the side of the map. Say it's <strong>77</strong>."],
+  ["Count tenths up", "Now count how many tenths up the square your point is. If it's just under halfway, that's <strong>4</strong>, so your northing is <strong>774</strong>."],
+  ["Put it together", "Write the easting first, then the northing: <strong>515 774</strong>. Add the two letters of the 100 km square, printed on the map, to make it unique in Britain: for example <strong>SJ 515 774</strong>."]
+ ],
+ "faq": [
+  ["What's the difference between a four-figure and a six-figure grid reference?", "A four-figure reference, such as 5177, names a whole 1 km square. A six-figure reference, such as 515 774, narrows it to a 100 m square inside it, which is precise enough to find a path junction or a building."],
+  ["Why do you read eastings first?", "It's the convention, so everyone reads a reference the same way. Remember it as \"along the corridor, then up the stairs\": across first, then up."],
+  ["Do I need the two letters at the start?", "The numbers repeat every 100 km, so on its own a reference could be in several places in Britain. The two letters, such as SJ for most of Cheshire, make it unique. Always include them when you give your location to anyone else."],
+  ["Can my phone give me a grid reference?", "Yes. Ordnance Survey's apps can show your grid reference using GPS. It's still worth knowing how to read one from a paper map, because batteries run out and signal drops."]
+ ],
+ "sources": [
+  ["Ordnance Survey: pinpointing your location", "https://getoutside.ordnancesurvey.co.uk/guides/navigation-pinpointing-your-location"],
+  ["Ordnance Survey: beginner's guide to map reading", "https://getoutside.ordnancesurvey.co.uk/guides/beginners-guides-map-reading"]
+ ]}
+meta-->
+<main id="top">
+  <section class="page-head">
+    <div class="wrap">
+      {{crumbs}}
+      <p class="eyebrow">Skills guide · Map and compass</p>
+      <h1>How to read a six-figure grid reference</h1>
+      <p class="lead">A grid reference tells anyone, including a mountain rescue team, exactly where you are. Six figures gets you to within 100 metres.</p>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <div class="wrap">
+      <article class="prose">
+        <div class="answer"><span class="label">The short answer</span>Find the grid square, read the number of the line on its left (the easting) along the bottom of the map, then the number of the line along its bottom (the northing) up the side. Split the square into tenths to add a third digit to each, and write the easting first: for example, SJ 515 774.</div>
+
+        <h2>Step by step</h2>
+        {{steps}}
+
+        <h2>Tips</h2>
+        <ul>
+          <li>"Along the corridor, then up the stairs": eastings first, northings second.</li>
+          <li>Most compasses have a romer, a small scale on the baseplate, for measuring tenths accurately. Make sure it matches your map's scale (1:25,000 or 1:50,000).</li>
+          <li>Practise on places you know: your house, a car park, a café. Then check yourself with a phone app.</li>
+          <li>In an emergency, give the grid reference with its two letters, and a description of what's around you.</li>
+        </ul>
+
+        <h2>Questions</h2>
+        {{faq}}
+
+        {{cta}}
+
+        {{sources}}
+        <p class="small">Last updated 24 November 2026.</p>
+      </article>
+    </div>
+  </section>
+</main>

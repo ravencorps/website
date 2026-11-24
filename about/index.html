@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About Raven Corps: skills, sections, the Code and safeguarding | Raven Corps</title>
+<meta name="description" content="Raven Corps is a community group started in Frodsham, Cheshire in 2026. It teaches adults, and later children, real-world skills in local chapters, with cadet-style ranks, a Code of seven values and a strong safeguarding policy.">
+<meta name="theme-color" content="#eceee7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11130f" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="canonical" href="https://ravencorps.co.uk/about/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raven Corps">
+<meta property="og:title" content="About Raven Corps: skills, sections, the Code and safeguarding | Raven Corps">
+<meta property="og:description" content="Raven Corps is a community group started in Frodsham, Cheshire in 2026. It teaches adults, and later children, real-world skills in local chapters, with cadet-style ranks, a Code of seven values and a strong safeguarding policy.">
+<meta property="og:url" content="https://ravencorps.co.uk/about/">
+<meta property="og:image" content="https://ravencorps.co.uk/assets/og.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url("/fonts/barlow-condensed-latin-600-normal.woff2") format("woff2");}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url("/fonts/barlow-condensed-latin-700-normal.woff2") format("woff2");}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/barlow-latin-400-normal.woff2") format("woff2");}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url("/fonts/barlow-latin-500-normal.woff2") format("woff2");}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:600;font-display:swap;src:url("/fonts/barlow-latin-600-normal.woff2") format("woff2");}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2");}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url("/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2");}
+/* Layout: an Ordnance Survey map sheet. A gridded hero with real Frodsham grid numbers, then plain bands of field-manual text. */
+:root {
+  --paper: #eceee7;
+  --paper-2: #e1e4da;
+  --ink: #181a16;
+  --ink-2: #4c5146;
+  --rule: #c5c9bb;
+  --olive: #3d4829;
+  --on-olive: #f0f2ea;
+  --brass: #8c6d22;
+  --grid: rgba(24, 26, 22, 0.075);
+  --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Barlow", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --step: 96px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #11130f; --paper-2: #181b15; --ink: #e7e9e1; --ink-2: #a2a898; --rule: #2d3128;
+    --olive: #8a9862; --on-olive: #11130f; --brass: #c9a650; --grid: rgba(231, 233, 225, 0.06);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #11130f; --paper-2: #181b15; --ink: #e7e9e1; --ink-2: #a2a898; --rule: #2d3128;
+  --olive: #8a9862; --on-olive: #11130f; --brass: #c9a650; --grid: rgba(231, 233, 225, 0.06);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.02; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(2rem, 4.5vw, 3rem); text-transform: uppercase; letter-spacing: 0.01em; }
+h3 { font-size: 1.45rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
+p { margin: 0; }
+
+.wrap {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 14px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 22px;
+  background: var(--olive); color: var(--on-olive);
+  font-family: var(--display); font-weight: 600; font-size: 1.15rem;
+  letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+  border: 2px solid var(--olive); border-radius: 3px;
+  transition: background-color .15s, color .15s;
+}
+.btn:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.btn-quiet { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-quiet:hover { background: var(--ink); color: var(--paper); }
+.btn-small { min-height: 40px; padding: 0 16px; font-size: 1rem; }
+.btn-invert { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.btn-invert:hover { background: transparent; color: var(--paper); border-color: var(--paper); }
+
+/* Top bar */
+.topbar { border-bottom: 1px solid var(--rule); background: var(--paper); }
+.topbar-in { display: flex; align-items: center; gap: 24px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; }
+.brand img { width: 32px; height: auto; }
+.brand span { font-family: var(--display); font-weight: 700; font-size: 1.4rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.nav { display: flex; gap: 22px; }
+.nav a { text-decoration: none; font-weight: 500; font-size: 0.98rem; color: var(--ink-2); }
+.nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.nav a[aria-current] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+
+/* Small-screen menu */
+.menu { display: none; position: relative; }
+.menu summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; min-height: 40px; padding: 0 14px;
+  border: 2px solid var(--ink); border-radius: 3px;
+  font-family: var(--display); font-weight: 600; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.menu summary::-webkit-details-marker { display: none; }
+.menu nav {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; min-width: 220px;
+  display: flex; flex-direction: column; padding: 6px 0;
+  background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+.menu nav a { padding: 11px 18px; text-decoration: none; font-weight: 500; }
+.menu nav a:hover, .menu nav a[aria-current] { background: var(--paper-2); }
+@media (max-width: 960px) { .nav { display: none; } .menu { display: block; } .topbar-in { gap: 12px; } }
+@media (max-width: 420px) { .topbar .btn-small { display: none; } }
+
+/* Hero: map grid */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: var(--step) var(--step);
+  background-position: 0 0;
+}
+.grid-labels { position: absolute; display: flex; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-2); opacity: 0.75; pointer-events: none; }
+.grid-labels span { flex: none; }
+.eastings { top: 4px; left: 0; }
+.eastings span { width: var(--step); padding-left: 5px; }
+.northings { flex-direction: column; left: 5px; top: 0; }
+.northings span { height: var(--step); padding-top: 4px; }
+.northings span:first-child { visibility: hidden; }
+.hero-in {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding-block: clamp(56px, 9vw, 112px);
+}
+.hero-text { min-width: 0; }
+.hero h1 {
+  font-size: clamp(3.4rem, 10vw, 7.2rem);
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  line-height: 0.92;
+  margin-bottom: 24px;
+}
+.lead { font-size: clamp(1.1rem, 2.1vw, 1.3rem); max-width: 34em; color: var(--ink-2); margin-bottom: 32px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-mark { margin: 0; justify-self: center; width: min(100%, 340px); }
+.hero-mark img { width: 100%; filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.18)); }
+@media (max-width: 760px) {
+  .hero-in { grid-template-columns: 1fr; gap: 28px; padding-block: 44px 56px; }
+  .hero-mark { order: -1; width: 150px; justify-self: start; }
+}
+
+/* Bands */
+.band { padding-block: clamp(56px, 8vw, 96px); border-bottom: 1px solid var(--rule); }
+.band-alt { background: var(--paper-2); }
+.section-lead { max-width: 40em; color: var(--ink-2); margin-top: 16px; }
+
+/* Meetups */
+.meetups { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.meetup-main h2 { margin-bottom: 28px; }
+.details { margin: 0; display: grid; gap: 0; border-top: 2px solid var(--ink); }
+.details > div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 16px; padding-block: 14px; border-bottom: 1px solid var(--rule); }
+.details dt { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); padding-top: 4px; }
+.details dd { margin: 0; }
+.dates { border: 1px solid var(--rule); padding: 24px; background: var(--paper); }
+.dates h3 { font-size: 1.2rem; margin-bottom: 18px; }
+.date-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.date-list li { display: flex; align-items: baseline; gap: 14px; border-bottom: 1px dashed var(--rule); padding-bottom: 10px; }
+.date-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.date-list .d { font-family: var(--display); font-weight: 700; font-size: 2rem; line-height: 1; min-width: 2.2ch; font-variant-numeric: tabular-nums; }
+.date-list .m { font-family: var(--mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2); }
+@media (max-width: 860px) { .meetups { grid-template-columns: 1fr; gap: 36px; } }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 40px; border-top: 2px solid var(--ink); }
+.skill { padding: 24px 24px 28px 0; border-bottom: 1px solid var(--rule); }
+.skill:not(:nth-child(3n+1)) { padding-left: 24px; border-left: 1px solid var(--rule); }
+.skill h3 { margin-bottom: 8px; }
+.skill p { color: var(--ink-2); font-size: 1rem; }
+@media (max-width: 860px) {
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+  .skill:nth-child(even) { padding-left: 20px; border-left: 1px solid var(--rule); }
+}
+@media (max-width: 560px) {
+  .skills { grid-template-columns: 1fr; }
+  .skill:nth-child(even) { padding-left: 0; border-left: 0; }
+  .skill { padding-right: 0; }
+}
+
+/* Families: age ladder */
+.ladder { list-style: none; margin: 36px 0 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border: 1px solid var(--rule); }
+.ladder li { display: flex; flex-direction: column; gap: 4px; padding: 16px 14px; border-left: 1px solid var(--rule); min-width: 0; }
+.ladder li:first-child { border-left: 0; }
+.ladder .sec { font-family: var(--display); font-weight: 700; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.03em; }
+.ladder .age { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.ladder .now { background: var(--olive); color: var(--on-olive); }
+.ladder .now .age { color: var(--on-olive); opacity: 0.85; }
+.ladder .tag { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px; }
+.note { margin-top: 18px; font-size: 0.98rem; color: var(--ink-2); max-width: 40em; }
+@media (max-width: 860px) {
+  .ladder { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ladder li:nth-child(4) { border-left: 0; }
+  .ladder li:nth-child(n+4) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 480px) {
+  .ladder { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ladder li:nth-child(4) { border-left: 1px solid var(--rule); }
+  .ladder li:nth-child(odd) { border-left: 0; }
+  .ladder li:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+
+/* Help */
+.help { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; align-items: end; }
+.roles { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+.roles li { padding: 12px 0 12px 28px; border-bottom: 1px solid var(--rule); position: relative; }
+.roles li::before { content: ""; position: absolute; left: 4px; top: 50%; width: 12px; height: 6px; transform: translateY(-50%); background: linear-gradient(var(--brass), var(--brass)) top / 100% 2px no-repeat, linear-gradient(var(--brass), var(--brass)) bottom / 100% 2px no-repeat; }
+@media (max-width: 860px) { .help { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Call to action */
+.cta { background: var(--olive); color: var(--on-olive); padding-block: clamp(48px, 7vw, 80px); }
+.cta-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+.cta h2 { margin-bottom: 10px; }
+.cta p { max-width: 36em; }
+.cta-text p + p { margin-top: 14px; }
+.cta-mail { font-size: 0.95rem; }
+.mail { font-family: var(--mono); font-size: 0.92em; user-select: all; }
+/* The HubSpot form draws its own light styling, so it always sits on a white card. */
+.form-card { min-width: 0; background: #ffffff; color: #181a16; border-radius: 4px; padding: clamp(16px, 3vw, 32px); }
+.form-card .hs-form-frame { min-height: 320px; }
+.form-fallback { margin-top: 12px; font-size: 0.9rem; color: #4c5146; }
+.form-fallback a { color: #3d4829; font-weight: 600; }
+@media (max-width: 860px) { .cta-in { grid-template-columns: 1fr; } }
+
+/* Footer */
+.foot { padding-block: 32px 40px; color: var(--ink-2); font-size: 0.95rem; }
+.foot-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
+.foot-brand { display: flex; align-items: center; gap: 12px; }
+.foot-brand img { width: 28px; }
+.foot-brand div { display: flex; flex-direction: column; line-height: 1.2; }
+.foot-brand strong { font-family: var(--display); font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); }
+.foot-brand span { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.small { font-size: 0.85rem; }
+.social { display: flex; gap: 18px; }
+.social a { color: var(--ink); font-weight: 600; text-underline-offset: 4px; }
+
+
+/* Links from the home page to inner pages */
+.more-link { margin-top: 24px; font-weight: 600; }
+.more-link a { color: var(--olive); text-underline-offset: 4px; }
+.more-link a::after { content: " \2192"; }
+
+/* Footer links */
+.foot-links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.foot-links a { text-decoration: none; color: var(--ink); font-weight: 500; }
+.foot-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Inner pages */
+.page-head {
+  border-bottom: 1px solid var(--rule);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: var(--step) var(--step);
+  padding-block: clamp(36px, 6vw, 72px) clamp(32px, 5vw, 56px);
+}
+.page-head h1 { font-size: clamp(2.3rem, 6vw, 4.2rem); text-transform: uppercase; line-height: 0.95; max-width: 20ch; margin-bottom: 18px; }
+.page-head .lead { margin-bottom: 0; }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0 0 18px; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+.crumbs li + li::before { content: "/"; margin-right: 6px; opacity: 0.6; }
+.crumbs a { color: var(--ink-2); text-underline-offset: 3px; }
+.page-body { padding-block: clamp(36px, 6vw, 72px) clamp(56px, 8vw, 96px); }
+.prose { max-width: 44rem; min-width: 0; }
+.prose > * + * { margin-top: 1rem; }
+.prose h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin-top: 3rem; }
+.prose h3 { font-size: 1.25rem; margin-top: 2rem; }
+.prose ul, .prose ol { padding-left: 1.3rem; }
+.prose li + li { margin-top: 0.45rem; }
+.prose a:not(.btn) { color: var(--olive); font-weight: 500; text-underline-offset: 3px; }
+.answer { border-left: 4px solid var(--olive); background: var(--paper-2); padding: 18px 22px; font-size: 1.1rem; }
+.answer .label { display: block; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 6px; }
+.callout { border: 1px solid var(--brass); padding: 16px 20px; font-size: 1rem; }
+.callout strong { font-weight: 600; }
+.steps { list-style: none; counter-reset: step; padding: 0 !important; border-top: 2px solid var(--ink); }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); column-gap: 12px; padding-block: 16px; border-bottom: 1px solid var(--rule); margin: 0 !important; }
+.steps li::before { content: counter(step, decimal-leading-zero); grid-row: span 2; font-family: var(--display); font-weight: 700; font-size: 1.8rem; line-height: 1; color: var(--brass); }
+.steps h3 { margin: 0 0 4px; font-size: 1.2rem; }
+.faq { border-top: 2px solid var(--ink); }
+.faq-item { padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.faq-item h3 { margin: 0 0 6px; font-size: 1.3rem; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.faq-item p { color: var(--ink-2); }
+.sources { font-size: 0.95rem; }
+.practise { margin-top: 3.5rem !important; background: var(--olive); color: var(--on-olive); padding: clamp(22px, 4vw, 32px); border-radius: 4px; }
+.practise .eyebrow { color: var(--on-olive); opacity: 0.85; margin-bottom: 8px; }
+.practise-title { font-family: var(--display); font-weight: 700; font-size: 1.8rem; line-height: 1; text-transform: uppercase; margin-bottom: 10px !important; }
+.practise .actions { margin-top: 18px; }
+.practise .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.practise .btn:hover { background: transparent; color: var(--on-olive); border-color: var(--on-olive); }
+.practise .btn-quiet { background: transparent; color: var(--on-olive); border-color: var(--on-olive); }
+.practise .btn-quiet:hover { background: var(--on-olive); color: var(--olive); }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); column-gap: 32px; border-top: 2px solid var(--ink); margin-top: 2rem; }
+.card { padding-block: 20px 24px; border-bottom: 1px solid var(--rule); min-width: 0; }
+.card h3 { font-size: 1.35rem; margin: 0 0 6px; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.card p { color: var(--ink-2); font-size: 1rem; }
+.prose .details { margin-top: 1.5rem; }
+[hidden] { display: none !important; }
+
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://ravencorps.co.uk/about/",
+   "url": "https://ravencorps.co.uk/about/",
+   "name": "About Raven Corps: skills, sections, the Code and safeguarding | Raven Corps",
+   "description": "Raven Corps is a community group started in Frodsham, Cheshire in 2026. It teaches adults, and later children, real-world skills in local chapters, with cadet-style ranks, a Code of seven values and a strong safeguarding policy.",
+   "inLanguage": "en-GB",
+   "isPartOf": {
+    "@id": "https://ravencorps.co.uk/#site"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://ravencorps.co.uk/#org",
+    "name": "Raven Corps",
+    "url": "https://ravencorps.co.uk/",
+    "logo": "https://ravencorps.co.uk/assets/raven-corps-logo.png",
+    "email": "hq@ravencorps.co.uk",
+    "slogan": "Ready for anything",
+    "sameAs": [
+     "https://www.facebook.com/ravencorpsglobal/"
+    ],
+    "areaServed": "United Kingdom",
+    "description": "A community group, started in Frodsham, Cheshire, for adults who want real-world skills: map and compass, bushcraft, first aid, fitness and being ready for emergencies."
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://ravencorps.co.uk/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "About",
+     "item": "https://ravencorps.co.uk/about/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="/" aria-label="Raven Corps home">
+      <img src="/assets/raven-corps-logo.png" alt="" width="32" height="40">
+      <span>Raven Corps</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+        <a href="/meetups/">Meetups</a>
+        <a href="/skills/">Skills guides</a>
+        <a href="/start-a-chapter/">Start a chapter</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/about/" aria-current="page">About</a>
+    </nav>
+    <a class="btn btn-small" data-signup href="/#signup">Sign up</a>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav aria-label="Main menu">
+        <a href="/meetups/">Meetups</a>
+        <a href="/skills/">Skills guides</a>
+        <a href="/start-a-chapter/">Start a chapter</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/#signup">Sign up</a>
+      </nav>
+    </details>
+  </div>
+</header>
+<main id="top">
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">About</li></ol></nav>
+      <p class="eyebrow">About</p>
+      <h1>Ready for anything</h1>
+      <p class="lead">Raven Corps teaches the skills that still work when the power doesn't, and builds people who are useful to their families and their community when things go wrong.</p>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <div class="wrap">
+      <div class="prose">
+        <h2>What Raven Corps is</h2>
+        <p>Raven Corps is a community group that started in Frodsham, Cheshire, in 2026. It runs in local chapters, each led by local volunteers, with ranks, a uniform and a Code borrowed from the best of the cadet tradition. Unlike most youth organisations, it starts with adults: the Sabres section, for over-18s, meets first, so that every children's section opens with trained leaders already in place.</p>
+        <p>It isn't military and it isn't a religious group. It's for anyone who wants to be more capable outdoors and more ready for emergencies, and who likes doing that with other people.</p>
+
+        <h2>What members learn</h2>
+        <ul>
+          <li><strong>Map and compass:</strong> reading an OS map, grid references, bearings and finding your way when the phone dies.</li>
+          <li><strong>Bushcraft:</strong> shelters, knots, water, safe fire-lighting, foraging and working with natural materials.</li>
+          <li><strong>First aid:</strong> what to do in the first few minutes, outdoors and at home.</li>
+          <li><strong>Fitness:</strong> strength and stamina for real tasks, built up gradually.</li>
+          <li><strong>Ready at Home:</strong> storing water and food, growing and foraging, and a yearly Ready Week living from your own stores.</li>
+          <li><strong>Service and history:</strong> helping the local community, and learning the history that shaped it.</li>
+        </ul>
+        <p>Every skill has six stages, from first steps to instructor, so members always know what's next. Read some of it for free in the <a href="/skills/">skills guides</a>.</p>
+
+        <h2>Sections</h2>
+        <p>Six sections take members from age 4 to adulthood. Adults start first; the children's sections are planned to open from September 2027.</p>
+        <dl class="details">
+          <div><dt>4 to 6</dt><dd>Pioneers</dd></div>
+          <div><dt>6 to 8</dt><dd>Trackers</dd></div>
+          <div><dt>8 to 10½</dt><dd>Outriders</dd></div>
+          <div><dt>10½ to 14</dt><dd>Lancers</dd></div>
+          <div><dt>14 to 18</dt><dd>Commandos</dd></div>
+          <div><dt>18+</dt><dd>Sabres, meeting from January 2027</dd></div>
+        </dl>
+
+        <h2>The Code</h2>
+        <dl class="details">
+          <div><dt>Faith</dt><dd>Live by the Christian values that shaped our country, and respect everyone's beliefs.</dd></div>
+          <div><dt>Loyalty</dt><dd>Stand by the King, your country, your chapter and your friends.</dd></div>
+          <div><dt>Courage</dt><dd>Do the right thing when it's hard, and keep going when you're tired.</dd></div>
+          <div><dt>Discipline</dt><dd>Be on time, ready and smart. Do your duty without being told twice.</dd></div>
+          <div><dt>Service</dt><dd>Put others first, and give your time to your community.</dd></div>
+          <div><dt>Honesty</dt><dd>Tell the truth, own your mistakes and keep your word.</dd></div>
+          <div><dt>Respect</dt><dd>Treat everyone as you'd want to be treated.</dd></div>
+        </dl>
+
+        <h2>How it's run</h2>
+        <p>Each chapter is its own constituted group, run by local volunteers under a chapter agreement. Raven Corps HQ, which looks after the curriculum, the apps, training and standards, is being set up as a not-for-profit company. Chapters pay HQ a yearly fee per member, so the organisation is funded by its members rather than by donations.</p>
+
+        <h2>Safeguarding</h2>
+        <p>Raven Corps has a written safeguarding policy and code of conduct. Anyone who works with under-18s needs two references, an enhanced DBS check and safeguarding training before they start, and there are always at least two adults. Each chapter has a named safeguarding lead. If you have a concern, email <span class="mail">hq@ravencorps.co.uk</span>.</p>
+
+        <h2>Get in touch</h2>
+        <p>Email <span class="mail">hq@ravencorps.co.uk</span>, find us on <a href="https://www.facebook.com/ravencorpsglobal/" target="_blank" rel="noopener">Facebook</a>, or <a href="/#signup">sign up</a> and we'll be in touch.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="/assets/raven-corps-logo.png" alt="" width="28" height="35">
+      <div>
+        <strong>Raven Corps</strong>
+        <span>Ready for anything</span>
+      </div>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="/meetups/">Meetups</a>
+      <a href="/skills/">Skills guides</a>
+      <a href="/start-a-chapter/">Start a chapter</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/about/">About</a>
+    </nav>
+    <p>Frodsham, Cheshire · <span class="mail">hq@ravencorps.co.uk</span></p>
+    <p class="social"><a href="https://www.facebook.com/ravencorpsglobal/" target="_blank" rel="noopener">Facebook</a></p>
+    <p class="small">© 2026 Raven Corps</p>
+  </div>
+</footer>
+</body>
+</html>
